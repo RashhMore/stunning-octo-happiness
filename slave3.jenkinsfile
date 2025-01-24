@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Print a welcome message
+echo "Welcome to Jenkins Shell Script Execution!"
+
+# Display current date and time
+echo "Current Date and Time: $(date)"
+
+# Display the hostname of the system
+echo "Running on host: $(hostname)"
+
+# Check disk space usage
+echo "Disk Space Usage:"
+df -h
+
+# Create a directory and a sample file
+WORK_DIR="/tmp/jenkins_demo"
+echo "Creating directory: $WORK_DIR"
+mkdir -p "$WORK_DIR"
+
+echo "Creating a sample file in $WORK_DIR"
+echo "This is a sample file created by Jenkins at $(date)" > "$WORK_DIR/sample.txt"
+
+# Display the contents of the created file
+echo "Contents of the sample file:"
+cat "$WORK_DIR/sample.txt"
+
+# End of the script
+echo "Shell script executed successfully!"
+
